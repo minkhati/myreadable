@@ -1,5 +1,4 @@
-import { combineReducers } from 'redux';
-
+import { combineReducers } from 'redux'
 
 
 // For Categories
@@ -16,5 +15,7 @@ const categories = (state = { categories: [] }, action) => {
 }
 
 export default combineReducers({
-  categories
-});
+  
+  categories,
+ 
+})

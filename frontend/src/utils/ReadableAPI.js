@@ -1,10 +1,9 @@
 const api = process.env.REACT_APP_READABLE_API_URL || 'http://localhost:3001'
 
-
-// get token from local storage
+// Get token from localStorage
 let token = localStorage.token
 
-if (!token)
+if (!token) 
   token = localStorage.token = Math.random().toString(36).substr(-8)
 
 const headers = {
@@ -13,7 +12,6 @@ const headers = {
 }
 
 // GET /categories
-
 export const getAllCategories = () => {
   return fetch(`${api}/categories`, { headers })
     .then(response => response.json())
