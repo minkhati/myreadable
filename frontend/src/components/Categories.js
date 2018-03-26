@@ -11,9 +11,9 @@ class Categories extends Component {
 
   render() {
     const { categories } = this.props;
-    const categoriesList = categories.map((category) => {
+    const categoriesList = categories.map((category, index) => {
       return (
-        <li key={category.name}>
+        <li key={index}>
           <Link to={`/${category.name}`}>{category.name}</Link>
         </li>
       )

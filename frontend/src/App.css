@@ -47,7 +47,7 @@
 .PlusButton-Container {
   background: linear-gradient(90deg, #F6B352 0%, #F1CDD4 100%);
   position:fixed;
-  top: 50px;
+  top: 20px;
   left: 85%;
   width: 45px;
   height: 45px;

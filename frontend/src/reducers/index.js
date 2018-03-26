@@ -15,7 +15,6 @@ const categories = (state = { categories: [] }, action) => {
 }
 
 export default combineReducers({
-  
   categories,
  
 })
