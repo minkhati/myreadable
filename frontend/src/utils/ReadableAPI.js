@@ -1,4 +1,4 @@
-const api = process.env.REACT_APP_READABLE_API_URL || 'http://localhost:3001'
+const api = process.env.REACT_APP_READABLE_API_URL 
 
 // Get token from localStorage
 let token = localStorage.token
