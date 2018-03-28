@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { fetchCategories, addNewPostAction } from '../../actions'
 import uuidv1 from 'uuid/v1'
 
@@ -112,7 +113,7 @@ class NewPost extends Component {
         <div className="NewPost-Body">
           <div>
             <textarea 
-              placeholder="Here your post detail goes..."
+              placeholder="Enter post detail "
               onChange={(e) => this.onBodyChange(e)}
               value={this.state.body}
               name="comments" 
@@ -139,6 +140,7 @@ class NewPost extends Component {
             value="Post" 
             onClick={this.onPostClick.bind(this)} />
         </div>
+        <Link to="/" className="btn btn-danger">Cancel</Link>
       </div>
     )
   }

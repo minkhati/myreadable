@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Categories from './Categories';
 
-import Header from './Header/';
+import Header from './Header/'
+import Posts from './Posts/'
+import PostDetail from './PostDetail/'
 import NewPost from './NewPost/'
-
-import SideNav from './SideNav';
-import PlusButton from './PlusButton';
+import EditPost from './EditPost'
+import SideNav from './SideNav'
+import PlusButton from './PlusButton'
 
 
 import '../App.css';
@@ -42,7 +44,11 @@ class App extends Component {
           <SideNav sideNavClass={sideNavClass} />
           <div className={postsClass.join(' ')}>
             <Switch>
+              <Route exact path ='/' component={Posts} />
               <Route exact path ='/new' component={NewPost} />
+              <Route exact path ='/edit/:id' component={EditPost} />
+              <Route exact path ='/:category' component={Posts} />
+              <Route exact path ='/:category/:id' component={PostDetail} />
             </Switch>
           </div>
           <PlusButton />

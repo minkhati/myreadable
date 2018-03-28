@@ -18,7 +18,7 @@
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: linear-gradient(10deg, #F6B352 0%, #FA4D6D 100%);
+  background: linear-gradient(10deg, #00f6ff 0%, #00d4ff 100%);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   transition: .5s;
 }
@@ -57,7 +57,7 @@
 }
 
 .PlusButton {
-  margin: 7px auto;
+  margin: 3px 12px;
   width: 50%;
   height: 50%;
 }

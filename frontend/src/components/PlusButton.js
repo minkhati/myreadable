@@ -5,7 +5,7 @@ const PlusButton = () => {
   return (
     <div className='PlusButton-Container'>
       <div className='PlusButton'>
-        <p><Link to='/new'>+</Link></p>
+        <p><Link to='/new' style={{ textDecoration: 'none' }}>+</Link></p>
       </div>
     </div>
   )

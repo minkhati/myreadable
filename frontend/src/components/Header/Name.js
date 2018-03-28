@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 const Name = (props) => {
   return(
     <div className="Name-Container">
       <h1 className="Name">
-        {props.name}
+        <Link to="/" style={{ textDecoration: 'none', color: 'whitesmoke' }}>{props.name}</Link>
       </h1>
     </div>
   )

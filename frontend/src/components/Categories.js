@@ -1,37 +1,42 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { fetchCategories } from '../actions';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { fetchCategories } from '../actions'
 
 class Categories extends Component {
-
-  componentDidMount() {
-    this.props.getCategories();
+  
+  componentDidMount() {  
+    this.props.getCategories()
   }
 
-  render() {
-    const { categories } = this.props;
-    const categoriesList = categories.map((category, index) => {
+  render() {    
+    const { categories } = this.props
+    const list = categories.map((item, index) => {
       return (
         <li key={index}>
-          <Link to={`/${category.name}`}>{category.name}</Link>
+          <Link to={`/${item.name}`}>{item.name}</Link>
         </li>
       )
     })
-
-    return (
-      <div className='categories'>
-        <ul className='categories-list'>
-          <li key='All'>
-            <Link to='/'>All</Link>
-          </li>
-          {categoriesList}
+    
+    return(
+      <div className="Categories">
+        <ul className="Categories-List">
+          <All />
+          {list}
         </ul>
       </div>
     )
   }
 }
 
+const All = () => {
+  return(
+    <li key='All'>
+      <Link to='/'>All</Link>
+    </li>
+  )
+}
 
 const mapStateToProps = ({ categories }) => {
   return {
